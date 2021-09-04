@@ -14,6 +14,10 @@ app.config['MONGO_DBNAME'] = os.environ.get('DB')
 app.config['MONGO_URI'] = os.environ.get('DBCONNECTION')
 mongo = PyMongo(app)
 
+@app.route("/")
+def index() -> str:
+    return jsonify({"message": "FPI Data API"})
+
 @app.route('/user', methods=['POST'])
 def Authenticate():
   username = request.json['UserName']
