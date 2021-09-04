@@ -16,7 +16,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index() -> str:
-    return jsonify({"message": "FPI Data API"})
+    return jsonify({"message": "FPI Data API Service"})
 
 @app.route('/user', methods=['POST'])
 def Authenticate():
